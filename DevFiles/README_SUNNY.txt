@@ -1,0 +1,2 @@
+When you're done making changes to some of her moves, make sure you put the new files in here in an unpacked form.
+EX: If you change her sprites, delete the old jonbins and put in the new jonbins in the right folder here, THEN pack and encrypt them and put them in ModdedFiles.
