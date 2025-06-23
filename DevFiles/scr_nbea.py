@@ -4231,7 +4231,7 @@ def nbef_233():
     Unknown2677(0)
 
 @State
-def ktef_240(): # Might be buggy, but this is kotone j.B effect
+def ktef_240(): # Kotone j.B effect
 
     def upon_IMMEDIATE():
         Unknown495(2)
@@ -4240,8 +4240,13 @@ def ktef_240(): # Might be buggy, but this is kotone j.B effect
         Unknown549(2)
         Unknown1708(1)
         Unknown2488(2147483647)
-    sprite('vr_nb202_00', 1)
-    sprite('vr_nb202_00', 16)
+    #Unknown105(3000)
+    #Unknown110(-59000)
+    #Unknown175(180000)
+    #sprite('vr_nb202_00', 1)
+    #sprite('vr_nb202_00', 16)
+    sprite('vr_nb231_11', 1)
+    sprite('vr_nb231_11', 16)
     Unknown495(0)
     Unknown2670('vr_nb202_00_layer_nbc')
     Unknown2673(100)
@@ -4409,6 +4414,25 @@ def nbef_210():
         Unknown401()
         Unknown549(2)
         Unknown1708(1)
+    sprite('vr_nb210_00', 16)
+    Unknown2670('vr_nb210_00_layer_nbc')
+    Unknown2673(100)
+    Unknown2675(100)
+    Unknown2676(40)
+    SLOT_122 = 0
+    Unknown2677(0)
+
+@State
+def nbef_210_5bslash():
+
+    def upon_IMMEDIATE():
+        Unknown498(2)
+        Unknown497(2)
+        Unknown495(2)
+        Unknown401()
+        Unknown549(2)
+        Unknown1708(1)
+    Unknown159(1300) # Width Scaling, 1000 is 1-1 with the original sprite
     sprite('vr_nb210_00', 16)
     Unknown2670('vr_nb210_00_layer_nbc')
     Unknown2673(100)

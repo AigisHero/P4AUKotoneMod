@@ -1857,7 +1857,7 @@ def NmlAtk5B():
     SFX_0('slash_sword_middle')
     Unknown116(4000)
     sprite('ko230_06', 3)
-    GFX_0('nbef_210', 100) # Mina AoA slash effect for a temporary visual, might need to move to be adjusted
+    GFX_0('nbef_210_5bslash', 100) # Mina AoA slash effect for a temporary visual, might need to move to be adjusted
     Unknown254()
     Unknown687(2)
     sprite('ko230_06', 4)
@@ -2178,7 +2178,6 @@ def NmlAtkAir5B():
     SFX_0('slash_sword_middle')
     sprite('ko240_07', 3)
     Unknown254()
-    GFX_0('ktef_240', 100)
     GFX_0('ktef_240', 100)
     Unknown687(2)
     sprite('ko240_07', 7)
