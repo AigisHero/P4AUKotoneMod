@@ -1,6 +1,6 @@
 @Subroutine
 def PreInit():
-    Unknown1402('nb')
+    Unknown1402('nb')# newboss
 
 @Subroutine
 def MatchInit():
