@@ -1560,7 +1560,7 @@ def IZ_Persona5C():
         Unknown1371(1)
         Unknown2757()
         Unknown597(27, 6)
-        Unknown2760(3, 100, -100000, 0)
+        Unknown2760(3, 100, -10000, 0) # Was -100000
         Unknown2763(0, 2000000, 0, 0)
         Unknown2764(0, 0)
         Unknown273(1)
@@ -3972,6 +3972,27 @@ def nbef_201():
     Unknown2673(100)
     Unknown2675(100)
     Unknown2676(75)
+    SLOT_122 = 200
+    Unknown2677(0)
+
+@State
+def nbef_201_upperslash():
+
+    def upon_IMMEDIATE():
+        Unknown495(2)
+        Unknown497(2)
+        Unknown498(2)
+        Unknown401()
+        Unknown549(2)
+        Unknown1708(1)
+    sprite('vr_nb201_00', 16)
+    Unknown2670('vr_nb201_layer_nbc')
+    Unknown2673(100)
+    Unknown2675(100)
+    Unknown2676(75)
+    Unknown105(-160000)
+    Unknown110(310000)
+    Unknown175(120000)
     SLOT_122 = 200
     Unknown2677(0)
 
