@@ -1817,7 +1817,7 @@ def NmlAtk2A():
 def NmlAtk5B():
 
     def upon_IMMEDIATE():
-        AttackLevel_(4)
+        AttackLevel_(4) # This move might be pretty good
         Damage(700)
         Unknown1142(200)
         Unknown1130(100)
