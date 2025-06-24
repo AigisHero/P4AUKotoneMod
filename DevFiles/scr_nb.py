@@ -1,6 +1,6 @@
 @Subroutine
 def PreInit():
-    Unknown1402('nb')# newboss
+    Unknown1402('nb')
 
 @Subroutine
 def MatchInit():
@@ -1871,9 +1871,6 @@ def NmlAtk5B():
     Unknown122(0)
     sprite('ko230_06', 4)
     sprite('ko230_06', 3)
-    Unknown256()
-    sprite('ko230_06', 2)
-    sprite('ko230_06', 1)
 
 @State
 def NmlAtk2B():
