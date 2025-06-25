@@ -3364,29 +3364,29 @@ def GlaiveRushB():
     Unknown187(0)
     Unknown740(0, 1, 1)
     sprite('nb403_00', 1)
-    if CheckInput(0xa):
-        SLOT_47 = (SLOT_47 + 1)
+    #if CheckInput(0xa): # Held version is temporarily disabled because it's still inconsistent.
+    #    SLOT_47 = (SLOT_47 + 1)
     sprite('nb403_00', 1)
-    if CheckInput(0xa):
-        SLOT_47 = (SLOT_47 + 1)
+    #if CheckInput(0xa):
+    #    SLOT_47 = (SLOT_47 + 1)
     sprite('nb403_00', 1)
-    if CheckInput(0xa):
-        SLOT_47 = (SLOT_47 + 1)
+    #if CheckInput(0xa):
+    #    SLOT_47 = (SLOT_47 + 1)
     # Glaive rush still doesn't feel consistent, maybe instead just check if they hold B for up to 3 frames during startup and THEN boost height
-    if (SLOT_47 >= 3):
-        SLOT_54 = 1
-        Unknown116(18000)
-        Unknown123(32000)
-        Unknown138(350)
-    else:
-        Unknown116(28000)
-        Unknown123(24000)
+    #if (SLOT_47 >= 3):
+    #    SLOT_54 = 1
+    #    Unknown116(18000)
+    #    Unknown123(32000)
+    #    Unknown138(350)
+    #else:
+    Unknown116(28000)
+    Unknown123(24000)
     SFX_0('highjump_m')
     sprite('nb403_01', 1)
     sprite('nb403_01', 2)
     Unknown138(2000)
-    if (SLOT_54 == 1):
-        Unknown138(1800)
+    #if (SLOT_54 == 1):
+    #    Unknown138(1800)
     sprite('nb403_01', 1)
     Unknown398(1)
     sprite('nb403_01', 1)
