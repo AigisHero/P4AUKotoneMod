@@ -2951,10 +2951,10 @@ def Maharagi_fire():
     def upon_IMMEDIATE():
         Unknown266()
         AttackLevel_(2)
-        Damage(900)
+        Damage(1100)
         Unknown1142(300)
         Unknown1236(0)
-        Unknown1341(31)
+        Unknown1341(25)
         Unknown1343(40)
         Unknown1351(1)
         Unknown1372(1)
@@ -3021,6 +3021,92 @@ def fireyugamisubC():
     sprite('vr_yu_yugami', 15)
     sprite('vr_yu_yugami', 13)
     Unknown373(-20)
+
+
+@State
+def px_Persona236CD():
+
+    def upon_IMMEDIATE():
+        callSubroutine('PersonaReset')
+        callSubroutine('PersonaKenseiMuteki')
+        Unknown265()
+        Unknown549(0)
+        Unknown1371(1)
+        Unknown2757()
+        Unknown597(27, 6)
+        Unknown2760(3, 100, 100000, 0)
+        Unknown2763(0, 2000000, 0, 0)
+        Unknown2764(0, 0)
+        Unknown273(1)
+        Unknown278(1)
+    sprite('pj000_00', 1)
+    GFX_0('zioLaunch', 0) # Should add the energy ball throw animation here
+    Unknown597(27, 3)
+    sprite('pj000_00', 1)
+    Unknown116(50000)
+    sprite('pj000_00', 1)
+    Unknown122(40)
+    sprite('pj000_00', 1)
+    Unknown122(20)
+    sprite('pj000_00', 1)
+    Unknown122(0)
+    GFX_0('pixie_Zio', 0)
+    sprite('pj000_00', 1)
+    sprite('pj000_00', 3)
+    sprite('pj000_00', 3)
+    sprite('pj000_00', 3)
+    sprite('pj000_00', 3)
+    sprite('keep', 32767)
+    enterState('PersonaDeleteAndIdling')
+
+@State
+def pixie_Zio():
+
+    def upon_IMMEDIATE():
+        Unknown266()
+        AttackLevel_(4)
+        Damage(800)
+        Unknown1130(300)
+        Unknown1142(300)
+        Unknown1236(8)
+        Unknown1082(10) # Air and ground hitstun animations, will see if these make it launch up.
+        Unknown1070(10)
+        AirPushbackX(2000)
+        AirPushbackY(32000)
+        YImpluseBeforeWallbounce(1800)
+        Unknown1341(60)
+        Unknown998(3500)
+        Unknown105(290000)
+        Unknown1379(2)
+        Unknown309(1)
+    sprite('null', 1)
+    GFX_0('zioExplosion', 0)
+    sprite('dmy_Megidora_Atk', 3)
+    Unknown254()
+
+@State
+def zioExplosion():
+
+    def upon_IMMEDIATE():
+        Unknown498(2)
+        Unknown109(0)
+        Unknown199(1100)
+    sprite('null', 100)
+    SFX_0('thunder_s')
+    SFX_0('damage_magic_mh')
+    SFX_0('bomb_m')
+    Unknown2529('mgef_406blast') # Unknown2529 is UNIVERSAL effects any character can summon!
+    Unknown26('charge_se')
+
+@State
+def zioLaunch():
+
+    def upon_IMMEDIATE():
+        Unknown498(2)
+        Unknown110(-100000)
+    sprite('null', 4)
+    Unknown542(12)
+    Unknown533('mgef_406throw', 100)
 
 @State
 def PersonaUltimateShotC():
