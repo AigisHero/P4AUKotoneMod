@@ -780,9 +780,17 @@ def MatchInit():
     Unknown430(0, 5)
     Unknown432(0, 65000)
     Unknown431(0, 100000)
-    Unknown2471(1, 1)
+    #Unknown2471(1, 1) # Displays the orgia gauge for personas
+    #Unknown2501(1, 3) # Defines that the gauge can only go between 0-3
+    #SLOT_28 = 0
+
+    Unknown2471(1, 1) # Makes marie bar visible
     Unknown2501(1, 3)
+    Unknown2508(1, 1)
+    Unknown2509(1, 1)
+    #SLOT_133 = 0
     SLOT_28 = 0
+    #Unknown2469(0, 40) # Sets the Marie weather to sunny?
 
 @Subroutine
 def LongHoldSkillInit():
@@ -807,6 +815,17 @@ def LongHoldSkillInit():
 @Subroutine
 def OnFrameStep():
     if SLOT_SLOT_17:
+        if (SLOT_28 <= 0): # On every frame check what persona it is and update the tracker in bottom left
+            SLOT_28 = 0
+            Unknown2469(1, 42)
+        elif (SLOT_28 == 1):
+            Unknown2469(1, 43)
+        elif (SLOT_28 == 2):
+            Unknown2469(1, 40)
+        elif (SLOT_28 == 3):
+            Unknown2469(1, 41)
+        elif (SLOT_28 >= 4):
+            SLOT_28 = 0
         if SLOT_SLOT_4:
             if (not SLOT_SLOT_77):
                 SLOT_4 = (SLOT_4 + (-1))
@@ -2832,12 +2851,7 @@ def ReversalAction():
     sprite('nb400_00', 3)
     Unknown685('nb300', 100, 'nb203', 100, '', 0, '', 0)
     Unknown2713(103)
-    if (SLOT_28 == 1):
-        SLOT_28 = 0
-    elif (SLOT_28 == 2):
-        SLOT_28 = 0
-    elif (SLOT_28 == 3):
-        SLOT_28 = 0
+    SLOT_28 = 0
     sprite('nb400_01', 2)
     sprite('nb400_02', 2)
     GFX_0('nbef_400', 100)
@@ -2966,7 +2980,7 @@ def ShotC():
     sprite('am403_02', 3)
     Unknown2768('jf_Persona236C')
     sprite('am403_03', 3)
-    GFX_1('persona_enter_ply2', 0)
+    GFX_1('persona_enter_ply2', 0) # For some reason this particle spawns on the ground?
     Unknown746(1, 100)
     sprite('am403_04', 4)
     SLOT_28 = 1
@@ -3478,7 +3492,7 @@ def PersonaSwapA():
     def upon_IMMEDIATE():
         if (not SLOT_SLOT_148):
             sendToLabel(0)
-    label(1)
+    label(1) # Awakening Version
     sprite('am403_00', 2)
     sprite('am403_01', 2)
     Unknown2416(0, -1)
@@ -3493,7 +3507,7 @@ def PersonaSwapA():
     Unknown256()
     sprite('am403_00', 2)
     ExitState()
-    label(0)
+    label(0) # Normal Version
     sprite('am403_00', 2)
     sprite('am403_01', 3)
     Unknown2416(0, -1)
@@ -3514,7 +3528,7 @@ def PersonaSwapB():
     def upon_IMMEDIATE():
         if (not SLOT_SLOT_148):
             sendToLabel(0)
-    label(1)
+    label(1) # Awakening Version
     sprite('am403_00', 2)
     sprite('am403_01', 2)
     Unknown2416(0, -1)
@@ -3529,7 +3543,7 @@ def PersonaSwapB():
     Unknown256()
     sprite('am403_00', 2)
     ExitState()
-    label(0)
+    label(0) # Normal Version
     sprite('am403_00', 2)
     sprite('am403_01', 3)
     Unknown2416(0, -1)
@@ -3550,7 +3564,7 @@ def PersonaSwapC():
     def upon_IMMEDIATE():
         if (not SLOT_SLOT_148):
             sendToLabel(0)
-    label(1)
+    label(1) # Awakening Version
     sprite('am403_00', 2)
     sprite('am403_01', 2)
     Unknown2416(0, -1)
@@ -3565,7 +3579,7 @@ def PersonaSwapC():
     Unknown256()
     sprite('am403_00', 2)
     ExitState()
-    label(0)
+    label(0) # Normal Version
     sprite('am403_00', 2)
     sprite('am403_01', 3)
     Unknown2416(0, -1)
@@ -3586,7 +3600,7 @@ def PersonaSwapD():
     def upon_IMMEDIATE():
         if (not SLOT_SLOT_148):
             sendToLabel(0)
-    label(1)
+    label(1) # Awakening Version
     sprite('am403_00', 2)
     sprite('am403_01', 2)
     Unknown2416(0, -1)
@@ -3601,7 +3615,7 @@ def PersonaSwapD():
     Unknown256()
     sprite('am403_00', 2)
     ExitState()
-    label(0)
+    label(0) # Normal Version
     sprite('am403_00', 2)
     sprite('am403_01', 3)
     Unknown2416(0, -1)
