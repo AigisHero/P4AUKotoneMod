@@ -4076,9 +4076,31 @@ def nbef_201_upperslash():
     Unknown2673(100)
     Unknown2675(100)
     Unknown2676(75)
-    Unknown105(-160000)
+    Unknown105(-133000)
     Unknown110(310000)
     Unknown175(120000)
+    SLOT_122 = 200
+    Unknown2677(0)
+
+@State
+def nbef_201_downslash():
+
+    def upon_IMMEDIATE():
+        Unknown495(2)
+        Unknown497(2)
+        Unknown498(2)
+        Unknown401()
+        Unknown549(2)
+        Unknown1708(1)
+    sprite('vr_nb201_00', 16)
+    Unknown2670('vr_nb201_layer_nbc')
+    Unknown2673(100)
+    Unknown2675(100)
+    Unknown2676(75)
+    Unknown105(-150000)
+    Unknown110(210000)
+    Unknown175(-90000) # Rotation
+    Unknown167(-1000) # X Scaling, it might just flip the image?
     SLOT_122 = 200
     Unknown2677(0)
 
