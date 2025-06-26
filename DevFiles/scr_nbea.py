@@ -4098,7 +4098,7 @@ def nbef_201_downslash():
     Unknown2675(100)
     Unknown2676(75)
     Unknown105(-150000)
-    Unknown110(210000)
+    Unknown110(235000)
     Unknown175(-90000) # Rotation
     Unknown167(-1000) # X Scaling, it might just flip the image?
     SLOT_122 = 200
