@@ -2828,21 +2828,20 @@ def jf_Persona236C():
         Unknown273(1)
         Unknown278(1)
     sprite('jf000_00', 2)
+    Unknown116(40000)
     Unknown597(27, 3)
     sprite('jf003_01', 2)
-    Unknown116(40000)
-    sprite('jf003_01', 2)
     Unknown122(90)
     sprite('jf003_01', 2)
-    Unknown122(90)
-    sprite('jf003_02', 1)
     Unknown122(90)
     sprite('jf003_02', 2)
-    Unknown122(90)
-    sprite('jf003_03', 1)
     Unknown122(0)
-    sprite('jf003_03', 1)
+    sprite('jf003_02', 3)
+    sprite('jf003_03', 2)
     GFX_0('npef_256_ice', 0)
+    sprite('jf003_03', 2)
+    sprite('jf003_03', 1)
+    sprite('jf003_03', 1)
     sprite('jf003_03', 3)
     sprite('jf003_03', 3)
     sprite('jf003_03', 3)
@@ -2858,17 +2857,18 @@ def npef_256_ice():
 
     def upon_IMMEDIATE():
         Unknown265()
-        AttackLevel_(4)
+        AttackLevel_(2)
         Damage(600)
         Unknown1130(100)
         Unknown1142(600)
         Unknown1348(1000)
         Unknown1236(4)
-        AirPushbackX(15000)
-        AirPushbackY(14000)
-        YImpluseBeforeWallbounce(2500)
+        AirPushbackX(-9000)
+        AirPushbackY(21000)
+        YImpluseBeforeWallbounce(1800)
         Unknown1082(16)
-        Unknown109(175000)
+        Unknown109(10000) # Height from ground
+        Unknown105(250000) # Horizontal Displacement
         Unknown1070(0)
         Unknown1361(60, 1, 0) # Increased from 45 frames freeze to 60
         Unknown1379(1)
@@ -2891,16 +2891,61 @@ def npef_256_ice():
         def upon_10():
             SFX_0('ice_slow')
             SFX_0('ice_fast')
-    sprite('vr_np256_ice', 2)
+    sprite('null', 2)
+    SFX_0('ice_fast')
+    GFX_0('431ice1', 100)
+    sprite('null', 2)
+    SFX_0('ice_fast')
+    sprite('vr_np256_ice', 14)
+    SFX_0('ice_fast')
+    GFX_0('431ice2', 100)
+    Unknown109(210000) # Height from ground
+    Unknown159(2000) # Width Scaling
+    Unknown167(2400) # Height Scaling
+    Unknown105(55000) # Additional horizontal adjustment to match the graphic
+    Unknown175(-20000)
     Unknown254()
-    Unknown116(35000)
     SFX_0('bomb_m')
     SFX_0('blaze_normal')
     GFX_1('npef_256ice_shot', 100)
-    label(0)
-    sprite('vr_np256_ice', 2)
+    sprite('null', 3)
     GFX_1('npef_256ice_Sub', 100)
-    gotoLabel(0)
+
+@State
+def __431ice1():
+
+    def upon_IMMEDIATE():
+        Unknown491('aref431_bigice1.DIG', '')
+        Unknown503()
+        Unknown2478(13)
+        Unknown401()
+        Unknown2488(2147483647)
+        Unknown105(63000)
+        Unknown310(1)
+        #Unknown175(-15000)
+        Unknown109(80000) # Height from ground
+    sprite('null', 19)
+    sprite('null', 5)
+    Unknown373(-80)
+
+@State
+def __431ice2():
+
+    def upon_IMMEDIATE():
+        #Unknown491('aref431_bigice2.DIG', '')
+        Unknown491('aref431_bigice3.DIG', '')
+        Unknown503()
+        Unknown2478(13)
+        Unknown401()
+        Unknown2488(2147483647)
+        Unknown105(83000)
+        Unknown310(1)
+        Unknown175(-50000)
+        Unknown109(10000) # Height from ground
+        Unknown199(600) # Scaling
+    sprite('null', 16)
+    sprite('null', 5)
+    Unknown373(-80)
 
 @State
 def pj_Persona236D():
@@ -2954,7 +2999,7 @@ def Maharagi_fire():
         Damage(1100)
         Unknown1142(300)
         Unknown1236(0)
-        Unknown1341(25)
+        Unknown1341(30)
         Unknown1343(40)
         Unknown1351(1)
         Unknown1372(1)
@@ -3040,7 +3085,6 @@ def px_Persona236CD():
         Unknown273(1)
         Unknown278(1)
     sprite('pj000_00', 1)
-    GFX_0('zioLaunch', 0) # Should add the energy ball throw animation here
     Unknown597(27, 3)
     sprite('pj000_00', 1)
     Unknown116(50000)
@@ -3080,7 +3124,7 @@ def pixie_Zio():
         Unknown1379(2)
         Unknown309(1)
     sprite('null', 1)
-    GFX_0('zioExplosion', 0)
+    GFX_1('tkef_drainthrow_loop', 0) # Was 100?
     sprite('dmy_Megidora_Atk', 3)
     Unknown254()
 
