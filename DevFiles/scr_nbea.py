@@ -2870,12 +2870,13 @@ def npef_256_ice():
         Unknown109(10000) # Height from ground
         Unknown105(250000) # Horizontal Displacement
         Unknown1070(0)
-        Unknown1361(60, 1, 0) # Increased from 45 frames freeze to 60
+        Unknown1361(60, 1, 0) # Freeze frames
         Unknown1379(1)
         Unknown1351(5)
         Unknown1372(1)
         Unknown499(3)
         Unknown402()
+        Unknown309(1) # Forces it out of corner
         GFX_2('npef_256ice')
 
         def upon_LANDING():
@@ -2900,10 +2901,10 @@ def npef_256_ice():
     SFX_0('ice_fast')
     GFX_0('431ice2', 100)
     Unknown109(210000) # Height from ground
-    Unknown159(2000) # Width Scaling
+    Unknown159(2000) # Width Scaling was 2000
     Unknown167(2400) # Height Scaling
-    Unknown105(55000) # Additional horizontal adjustment to match the graphic
-    Unknown175(-20000)
+    Unknown105(35000) # Additional horizontal adjustment to match the graphic was 55000
+    Unknown175(-23000)
     Unknown254()
     SFX_0('bomb_m')
     SFX_0('blaze_normal')
@@ -2940,9 +2941,10 @@ def __431ice2():
         Unknown2488(2147483647)
         Unknown105(83000)
         Unknown310(1)
-        Unknown175(-50000)
+        Unknown175(-53000)
         Unknown109(10000) # Height from ground
         Unknown199(600) # Scaling
+        Unknown309(1) # Forces it out of corner
     sprite('null', 16)
     sprite('null', 5)
     Unknown373(-80)
